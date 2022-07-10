@@ -1,7 +1,5 @@
 .container {
    display: grid;
-   margin: 0 2rem;
-
    grid-gap: 2rem 1rem;
    grid-template-areas:
        "logo"
@@ -13,14 +11,17 @@
     grid-area: logo;
     align-self: center;
     background-color: #ff7f32;
+    margin: 0 0rem;
  }
  
  .content-area {
      grid-area: content;
+     margin: 0 2rem;
  }
  
  .footer {
-   grid-area: footer;
+     grid-area: footer;
+     margin: 0 2rem;
  }
 
  * {
