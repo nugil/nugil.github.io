@@ -1,0 +1,56 @@
+.container {
+   display: grid;
+   margin: 0 2rem;
+
+   grid-gap: 2rem 1rem;
+   grid-template-areas:
+       "logo"
+       "content"
+       "footer";
+ }
+
+.logo {
+    grid-area: logo;
+    align-self: center;
+    background-color: #ff7f32;
+ }
+ 
+ .content-area {
+     grid-area: content;
+ }
+ 
+ .footer {
+   grid-area: footer;
+ }
+
+ * {
+   box-sizing: border-box;
+ }
+ 
+ html {
+   font-size: 16px;
+   font-family: 'Courier New', monospace;;
+ }
+ 
+ body {
+   background-color: #fbfbfb;
+ }
+ 
+ h1, h2, h3 {
+   margin-top: 0;
+ }
+ 
+ header h1 {
+   margin: 0;
+ }
+ 
+ main p {
+   margin-bottom: 0;
+ }
+
+ .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
