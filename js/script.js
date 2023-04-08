@@ -5,28 +5,21 @@ const third = shell.querySelector(".third")
 const line1 = "nugil offers consultancy within the"
 const line2 = "platform engineering area; architecture,"
 const line3 = "design, implementation, onboarding"
+const lines = [line1, line2, line3]
 
-
-const tech = ['kubernetes', 'infrastructure as code', 'gitops', 'containerization', 'cloud native', 'immutable infrastructure',
+const tech = ['kubernetes', 'automation', 'infrastructure as code', 'gitops', 'containerization', 'ci/cd', 'cloud native', 'immutable infrastructure',
               'pipelines', 'autoscaling']
 doIt()
 async function doIt() {
-
     prompt(shell, true)
-    await printLine(line1, shell)
-    await sleep(200);
+    for(let j = 0; j<lines.length; j++) {
+        await printLine(lines[j], shell)
+        await sleep(200);
+        prompt(shell)
+        await sleep(200);
+    }
 
     prompt(shell)
-    await sleep(200);
-    await printLine(line2, shell)
-    await sleep(200);
-    prompt(shell)
-    await printLine(line3, shell)
-    await sleep(200);
-    prompt(shell)
-    await sleep(200);
-    prompt(shell)
-
     i = 0
     while(true) {
         await printLine(tech[i], shell)
@@ -35,13 +28,6 @@ async function doIt() {
         await sleep(1000);
         i = (i + 1) % tech.length
     }
-/*    prompt(second)
-    await sleep(200);
-    await printLine(line2, second)
-    await sleep(200);
-    prompt(third)
-    await printLine(line3, third)
-*/
 }
 
 
