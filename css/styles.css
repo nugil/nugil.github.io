@@ -6,7 +6,7 @@ header {
 
 .pic {
     display: flex;
-    height:55%;
+    height:50%;
     background-color: #ff7f32;;
 
     justify-content: center;
@@ -21,7 +21,7 @@ header {
 
 .shell {
     display: grid;
-    height: 20%;
+    height: 24%;
     width: 100%;
     background-color: black;
     color: orange;
@@ -39,7 +39,7 @@ header {
 }
 footer {
     display: grid;
-    height:5%;
+    height:6%;
     background-color: #ff7f32;;
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
