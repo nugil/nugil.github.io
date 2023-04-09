@@ -9,9 +9,11 @@ const lines = [line1, line2, line3]
 
 const tech = ['kubernetes', 'automation', 'infrastructure as code', 'gitops', 'containerization', 'ci/cd', 'cloud native', 'immutable infrastructure',
               'pipelines', 'autoscaling']
+const cursor = "\u2589"
 doIt()
 async function doIt() {
     prompt(shell, true)
+    
     for(let j = 0; j<lines.length; j++) {
         await printLine(lines[j], shell)
         await sleep(200);
@@ -36,13 +38,13 @@ async function printLine(line, elem) {
     for (let i = 0; i < full.length; i++) {
         let rand = Math.floor(Math.random() * 150)
         await sleep(20 + rand)
-        elem.textContent += full[i];
+        elem.textContent = elem.textContent.replace(cursor, full[i] + cursor)
     }
 
 }
 async function removeLine(len, elem) {
     for(let i=0; i<len;i++) {
-        elem.textContent = elem.textContent.substr(0, elem.textContent.length - 1);
+        elem.textContent = elem.textContent.substr(0, elem.textContent.length - 2) + cursor;
         await sleep(50)
     }
 }
@@ -50,8 +52,9 @@ async function sleep(t) {
     await new Promise(r => setTimeout(r, t));
 }
 function prompt(elem, noNewLine) {
+    elem.textContent = elem.textContent.replace(cursor, '')
     if(!noNewLine) {
         elem.textContent += "\r\n"
     }
-    elem.textContent += "$> "
+    elem.textContent += "$> " + cursor
 }
