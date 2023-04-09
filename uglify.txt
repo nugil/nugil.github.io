@@ -1,0 +1,1 @@
+uglifyjs  --mangle --toplevel js/script.js > js/u.js
