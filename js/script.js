@@ -4,8 +4,8 @@ const line2 = "platform engineering area; architecture,"
 const line3 = "design, implementation, onboarding"
 const lines = [line1, line2, line3]
 
-const tech = ['kubernetes', 'automation', 'infrastructure as code', 'gitops', 'containerization', 'ci/cd', 'cloud native', 'immutable infrastructure',
-              'pipelines', 'autoscaling']
+const tech = ['kubernetes', 'automation', 'infrastructure as code', 'gitops', 'containerization', 'ci/cd', 'cloud native',
+              'developer experience', 'pipelines', 'autoscaling', "devops strategy"]
 const cursor = "\u2589"
 doIt()
 async function doIt() {
