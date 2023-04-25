@@ -1,5 +1,5 @@
 const shell = document.querySelector(".shell").querySelector("p");
-const line1 = "nugil offers consultancy within the"
+const line1 = "nugil offers consulting services within the"
 const line2 = "platform engineering area; architecture,"
 const line3 = "design, implementation, onboarding"
 const lines = [line1, line2, line3]
